@@ -2,22 +2,18 @@ import java.util.Scanner;
 import java.util.Stack;
 public class UseCase1_PalindromeChecker {
     public static void main(String[] args){
+
         String word = "madam";
-        boolean isPalindrome = true ;
+        String reversed="";
 
-        for(int i=0 ; i < word.length()/2 ; i++){
-            if(word.charAt(i) != word.charAt(word.length()-1-i)){
-                isPalindrome = false;
-                break;
-            }
+        for(int i=word.length()-1;i>=0;i--){
+            reversed = reversed + word.charAt(i);
         }
 
-        if(isPalindrome){
-            System.out.println("Is it a Palindrome ? Yes ");
+        if(word.equals(reversed)){
+            System.out.println("It is a Palindrome ? : True");
         }else{
-            System.out.println("Is it a Palindrome ? No") ;
+            System.out.println("It is a Palindrome ? : False");
         }
-
-
     }
 }
